@@ -54,10 +54,12 @@ if will_rain and not already_alerted:
         from_=whatsapp_from,
         to=whatsapp_to,
     )
+    
     print(f"Alert sent — {message.status}")
     already_alerted = True
 elif will_rain and already_alerted:
     print("Rain continues, but already alerted this cycle — staying quiet.")
+    
 else:
     if already_alerted:
         print("Rain has stopped — re-arming for the next event.")
